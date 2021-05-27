@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="rootTag">
+    <xsd:complexType>
+      <xsd:sequence>
+        
+        <xsd:element name="Award">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="AwardTitle" type="xsd:string" />
+              <xsd:element name="AGENCY" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="AwardEffectiveDate" type="xsd:string"/>
+              <xsd:element name="AwardExpirationDate" type="xsd:string" />
+              <xsd:element name="AwardTotalIntnAmount" type="xsd:float" minOccurs="0"/>
+              <xsd:element name="AwardAmount" type="xsd:int" minOccurs="0"/>
+              
+              <xsd:element name="AwardInstrument">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Value" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              
+              <xsd:element name="Organization">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Code" type="xsd:int" />
+                    <xsd:element name="Directorate">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Abbreviation" type="xsd:string" minOccurs="0"/>
+                          <xsd:element name="LongName" type="xsd:string" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Division">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Abbreviation" type="xsd:string" minOccurs="0"/>
+                          <xsd:element name="LongName" type="xsd:string" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              
+              <xsd:element name="ProgramOfficer">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="SignBlockName" type="xsd:string" />
+                    <xsd:element name="PO_EMAI" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="PO_PHON" type="xsd:string" minOccurs="0"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              
+              <xsd:element name="AbstractNarration" type="xsd:string" />
+              <xsd:element name="MinAmdLetterDate" />
+              <xsd:element name="MaxAmdLetterDate" />
+              <xsd:element name="ARRAAmount" type="xsd:string" />
+              <xsd:element name="TRAN_TYPE" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="CFDA_NUM" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="NSF_PAR_USE_FLAG" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="FUND_AGCY_CODE" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="AWDG_AGCY_CODE" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="AwardID" type="xsd:int" />
+              
+              <xsd:element maxOccurs="unbounded" name="Investigator" minOccurs="0">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="FirstName" type="xsd:string" />
+                    <xsd:element name="LastName" type="xsd:string" />
+                    <xsd:element name="PI_MID_INIT" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="PI_SUFX_NAME" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="PI_FULL_NAME" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="EmailAddress" type="xsd:string" />
+                    <xsd:element name="PI_PHON" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="NSF_ID" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="StartDate" />
+                    <xsd:element name="EndDate" type="xsd:string" />
+                    <xsd:element name="RoleCode" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              
+              <xsd:element maxOccurs="unbounded" name="Institution" minOccurs="0">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CityName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CountyName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ZipCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="PhoneNumber" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="StreetAddress" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="StreetAddress2" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CountryName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="StateName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="StateCode" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="CountryFlag" type="xsd:int" minOccurs="0"/>
+                    <xsd:element name="CONGRESSDISTRICT" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CONGRESS_DISTRICT_PERF" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CONGRESS_DISTRICT_ORG" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ORG_DUNS_NUM" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ORG_LGL_BUS_NAME" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ORG_PRNT_DUNS_NUM" type="xsd:string" minOccurs="0"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              
+
+              <xsd:element maxOccurs="unbounded" name="Performance_Institution" minOccurs="0">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CityName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CountyName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="StateCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ZipCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="PhoneNumber" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="StreetAddress" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="StreetAddress2" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CountryCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CountryName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="StateName" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CountryFlag" type="xsd:int" minOccurs="0"/>
+                    <xsd:element name="CONGRESSDISTRICT" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CONGRESS_DISTRICT_PERF" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="CONGRESS_DISTRICT_ORG" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ORG_DUNS_NUM" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ORG_LGL_BUS_NAME" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ORG_PRNT_DUNS_NUM" type="xsd:string" minOccurs="0"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+                
+    
+
+              <xsd:element maxOccurs="unbounded" name="ProgramElement" minOccurs="0">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Code" type="xsd:string" />
+                    <xsd:element name="Text" type="xsd:string" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              
+              <xsd:element maxOccurs="unbounded" name="ProgramReference" minOccurs="0">
+	        <xsd:complexType>
+		      <xsd:sequence>
+		        <xsd:element name="Code" type="xsd:string" />
+		        <xsd:element name="Text" type="xsd:string" />
+		      </xsd:sequence>
+	        </xsd:complexType>
+              </xsd:element>
+                
+                
+              <xsd:element maxOccurs="unbounded" name="Appropriation" minOccurs="0">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Code" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="APP_SYMB_ID" type="xsd:int" minOccurs="0"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              
+              <xsd:element maxOccurs="unbounded" name="FUND_OBLG" type="xsd:string" minOccurs="0"/> 
+            
+              <xsd:element maxOccurs="unbounded" name="POR" minOccurs="0">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="DRECONTENT" type="xsd:string" minOccurs="0" />
+                    <xsd:element name="POR_COPY_TXT" type="xsd:string" minOccurs="0"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
